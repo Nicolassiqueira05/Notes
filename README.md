@@ -1,2 +1,2 @@
 # Notes
-Note taking app with extra functions
+Note take app with extra functions
