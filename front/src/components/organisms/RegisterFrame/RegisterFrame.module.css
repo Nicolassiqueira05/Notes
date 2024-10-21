@@ -1,0 +1,56 @@
+.registercontainer{
+    width: 700px;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: #072A45;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.registerframe{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    height: 45%;
+    margin: 0px;
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    color: white;
+}
+button.link{
+    all: unset;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+.inputs{
+    width: 330px;
+    height: 220px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.dualtext{
+    display: flex;
+    align-items: center;
+}
+#forgot{
+    width: 280px;
+}
