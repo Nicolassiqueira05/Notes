@@ -1,0 +1,15 @@
+#main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+#leftbar{
+    width: 7vw;
+    background-color: #1F3F5C;
+}
+#content{
+    width: 93vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
