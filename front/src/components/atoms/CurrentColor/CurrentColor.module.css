@@ -1,0 +1,22 @@
+@keyframes open {
+    from {width: 180px;}
+    to {width: 40px;}
+  }
+
+.colors{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: open;
+    animation-duration: 500ms;
+}
+.circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: green;
+}

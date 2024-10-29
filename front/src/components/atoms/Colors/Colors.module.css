@@ -1,0 +1,39 @@
+@keyframes open {
+    from {width: 40px;}
+    to {width:200px;}
+  }
+
+.colors{
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation-name: open;
+    animation-duration: 500ms;
+}
+.circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.circle:hover{
+    border: 1px solid white;
+}
+#green{
+    background-color: green;
+}
+#yellow{
+    background-color: yellow;
+}
+#orange{
+    background-color: orange;
+}
+#red{
+    background-color: red;
+}
+#purple{
+    background-color: purple;
+}

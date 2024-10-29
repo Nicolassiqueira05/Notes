@@ -1,9 +1,10 @@
 import { useState } from "react"
 
-function Note ({title, text, Ccolor}){
+function Note ({title, type, text, Ccolor}){
     const [color, setColor] = useState(color)
 
     return(
+        
         <div className="note">
             <div>
                 <div className="circle" style={{backgroundColor: `${color}`}}></div>

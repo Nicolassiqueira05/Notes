@@ -1,6 +1,8 @@
 import { useState } from "react"
 import styles from "./BigNote.module.css"
 
+import Color from "../../molecules/Color/Color.jsx"
+
 function BigNote ({Ctitle, Ctext, Ccolor}){
 
     const [text, setText] = useState(Ctext)
@@ -23,10 +25,11 @@ function BigNote ({Ctitle, Ctext, Ccolor}){
     }
 
 
+    
     return(
         <div className={styles.BigNote}>
             <div className={styles.Header}>
-                {!colorChange ? (<div className={styles.circle} onClick={handleColorChange}></div>) : (<div onClick={handleColorChange}></div>)}
+                <Color />
                 <input className={styles.title} type="text" value={title} onChange={handleTitle}/>
                 <div className={styles.circle}></div>
             </div>
