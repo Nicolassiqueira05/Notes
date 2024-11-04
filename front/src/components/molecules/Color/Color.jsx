@@ -12,23 +12,17 @@ function Color (){
     function handleClick(Ccolor){
         if(clicked){
             setClicked(false)
+            setColor(Ccolor)
         }else{
             setClicked(true)
         }
-        if(Ccolor){
-            setColor(Ccolor)
-        }
     }
 
-    if(clicked == false){
-        return(
-                <CurrentColor func={handleClick} Ccolor={color}/>    
-        )
-        }else{
-            return(
-                <Colors func={handleClick}/>
-            )    
-    }
+    return clicked ? (
+        <Colors func={handleClick} />
+    ) : (
+        <CurrentColor func={handleClick} Ccolor={color} />
+    );
 }
 
 export default Color

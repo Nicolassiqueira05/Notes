@@ -1,19 +1,11 @@
 import styles from "./CurrentColor.module.css"
-import { useState } from "react"
 
-function CurrentColor ({Ccolor, func}){
-
-    function handleClick () {
-
-    }
-
-    return(
-        <>
-            <div className={styles.colors} onClick={func}>
-                <div className={styles.circle} id={styles.green} style={{backgroundColor: Ccolor}} onClick={() => handleClick()}></div>
-            </div>
-        </>
-    )
+function CurrentColor({ Ccolor, func }) {
+    return (
+        <div className={styles.colors} onClick={func}>
+            <div className={styles.circle} style={{ backgroundColor: Ccolor }}></div>
+        </div>
+    );
 }
 
-export default CurrentColor
+export default CurrentColor;
