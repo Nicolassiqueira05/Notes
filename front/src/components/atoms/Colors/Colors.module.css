@@ -1,26 +1,32 @@
 @keyframes open {
     from {width: 40px;}
-    to {width:200px;}
+    to {width:180px;}
   }
 
-.colors{
-    width: 200px;
-    height: 40px;
-    background-color: black;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  .colors {
+    width: 170px;
     animation-name: open;
-    animation-duration: 500ms;
+    animation-duration: 400ms;
+    position: absolute;
+    left: 20px;
+    display: flex;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
-.circle{
-    width: 25px;
-    height: 25px;
+.circle {
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
+    border: 2px solid white; /* Para dar destaque */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 .circle:hover{
-    border: 1px solid white;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }
 #green{
     background-color: green;

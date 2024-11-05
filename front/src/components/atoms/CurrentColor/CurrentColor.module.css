@@ -1,4 +1,4 @@
-@keyframes open {
+@keyframes close {
     from {width: 180px;}
     to {width: 40px;}
   }
@@ -11,12 +11,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation-name: open;
-    animation-duration: 500ms;
+    animation-name: close;
+    animation-duration: 400ms;
+    left: 20px;
+    position: absolute;
+    cursor: pointer;
 }
-.circle{
-    width: 25px;
-    height: 25px;
+.circle {
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    background-color: green;
+    border: 2px solid white; /* Para dar destaque */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.circle.selected
+
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }
