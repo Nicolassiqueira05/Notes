@@ -1,0 +1,41 @@
+.note {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    width: 250px;
+    transition: transform 0.2s;
+}
+
+.note:hover {
+    transform: scale(1.05);
+}
+
+.note h1 {
+    font-size: 1.2em;
+    margin: 0;
+    padding-bottom: 8px;
+    color: #333;
+}
+
+.note p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.4;
+    margin-top: 8px;
+}
+
+.circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.note div:first-child {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
