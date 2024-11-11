@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import java.math.BigInteger
 import java.util.Date
 
 @Entity
@@ -14,4 +15,5 @@ data class User(
         val email: String,
         val password: String,
         val dateC: Date,
+        val token: String
 )

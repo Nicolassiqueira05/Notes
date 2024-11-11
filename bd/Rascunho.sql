@@ -32,3 +32,6 @@ CREATE TABLE notas (
 ALTER TABLE notas
 ADD CONSTRAINT fk_usuario_id
 FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE;
+
+ALTER TABLE usuarios
+ADD column token VARCHAR(100);
