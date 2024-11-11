@@ -11,9 +11,9 @@ import java.util.Date
 data class User(
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Int? = null,
-        val nome: String,
+        val username: String,
         val email: String,
-        val password: String,
+        val userpassword: String,
         val dateC: Date,
         val token: String
 )

@@ -3,9 +3,9 @@ use notas;
 
 CREATE TABLE usuarios (
     id SERIAL PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
+    username VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
-    senha VARCHAR(255) NOT NULL,
+    userpassword VARCHAR(255) NOT NULL,
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -35,3 +35,5 @@ FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE;
 
 ALTER TABLE usuarios
 ADD column token VARCHAR(100);
+
+
