@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/api")
 class UserController (private val userService: UserService) {
     @GetMapping("/login")
-    fun login(): String{
-        return "working"
+    fun login(@RequestParam userName: String, @RequestParam userPassword: String): String{
+        return "user: " + userName + " password: " + userPassword;
     }
 }
