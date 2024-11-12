@@ -4,11 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import java.math.BigInteger
 import java.util.Date
 
 @Entity
-data class User(
+data class Duser(
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Int? = null,
         val username: String,
