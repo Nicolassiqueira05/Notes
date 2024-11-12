@@ -2,7 +2,7 @@ create database notas;
 use notas;
 
 CREATE TABLE usuarios (
-    id SERIAL PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     userpassword VARCHAR(255) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE usuarios (
 );
 
 CREATE TABLE notas (
-    id SERIAL PRIMARY KEY,
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
     usuario_id INT NOT NULL,
     conteudo JSON,
     /*Formato do json:
