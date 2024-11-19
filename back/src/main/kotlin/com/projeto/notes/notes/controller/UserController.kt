@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 class UserController (private val userService: UserService) {
     @CrossOrigin(origins = arrayOf("http://localhost:3000"))

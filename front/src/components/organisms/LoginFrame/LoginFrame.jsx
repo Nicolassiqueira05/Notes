@@ -11,30 +11,30 @@ function LoginFrame () {
     const [Password, setPassword] = useState('')
     const [Data, setData] = useState('')
 
-    const login = async () =>{
-        try{
-        const response = await fetch("http://127.0.0.1:8080/api/login", 
-            {
+    const login = async () => {
+        try {
+            const response = await fetch("http://127.0.0.1:8080/api/login", {
                 method: 'POST',
-                headers: 
-                {
-                    'Content-Type' : 'application/json',
+                headers: {
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     userName: Account,
                     userPassword: Password,
                 }),
+                credentials: 'include',
             });
+    
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error(`Network response was not ok: ${response.status} - ${response.statusText}`);
             }
-            
-            const result = response.json();
-            console.log(result)
+    
+            const result = await response.json(); // Adicionado await aqui
+            console.log(result);
         } catch (error) {
             console.error('Error:', error);
-          }
-        };
+        }
+    };
 
     return(
         <div className={styles.logincontainer}>
