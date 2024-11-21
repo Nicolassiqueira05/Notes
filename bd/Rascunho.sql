@@ -45,7 +45,7 @@ RENAME COLUMN Username TO username;
 GRANT ALL PRIVILEGES ON notas TO 'root'@'localhost';
 FLUSH PRIVILEGES;
 
-SELECT * FROM d_user;
+SELECT * FROM Duser;
 
 drop database notas;
 

@@ -15,8 +15,10 @@ function LoginFrame () {
         try {
             const response = await fetch("http://127.0.0.1:8080/api/login", {
                 method: 'POST',
+                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': 'Basic' + btoa('admin:123')
                 },
                 body: JSON.stringify({
                     userName: Account,

@@ -1,29 +1,22 @@
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.cors.CorsConfiguration
+import org.springframework.web.cors.CorsConfigurationSource
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource
-import org.springframework.web.filter.CorsFilter
 
 @Configuration
 class CorsConfig {
     @Bean
-    fun corsFilter(): CorsFilter {
+    fun corsConfigurationSource(): CorsConfigurationSource {
         val corsConfig = CorsConfiguration()
-
-        corsConfig.allowedOrigins = listOf("http://localhost:3000")
-
+        corsConfig.allowedOrigins = listOf("http://localhost:3000", "http://127.0.0.1:3000") // Adicione ambas as URLs
         corsConfig.allowedMethods = listOf("GET", "POST", "PUT", "DELETE", "OPTIONS")
+        corsConfig.allowedHeaders = listOf("Authorization", "Content-Type", "X-Requested-With")
+        corsConfig.exposedHeaders = listOf("Authorization")
+        corsConfig.allowCredentials = true // Permite envio de cookies
 
-        corsConfig.allowedHeaders = listOf( "Content-Type", "Authorization")
-
-        corsConfig.allowCredentials = true
-
-        corsConfig.maxAge = 3600L
-
-        // Configuração de rotas para aplicar o CORS
         val source = UrlBasedCorsConfigurationSource()
         source.registerCorsConfiguration("/**", corsConfig)
-
-        return CorsFilter(source)
+        return source
     }
 }
