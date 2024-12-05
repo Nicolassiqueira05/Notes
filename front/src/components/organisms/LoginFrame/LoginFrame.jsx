@@ -18,13 +18,11 @@ function LoginFrame () {
                 mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Basic' + btoa('admin:123')
                 },
                 body: JSON.stringify({
-                    userName: Account,
-                    userPassword: Password,
+                    userName: "nicolas",
+                    userPassword: "123",
                 }),
-                credentials: 'include',
             });
     
             if (!response.ok) {
